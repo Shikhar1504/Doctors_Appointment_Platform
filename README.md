@@ -52,7 +52,7 @@ npm install
 3. Set up environment variables:
    Create a `.env.local` file in the root directory and add the following variables:
 
-````env
+```env
 # Database
 DATABASE_URL="postgresql://username:password@localhost:5432/doctor_appointment"
 
@@ -67,7 +67,7 @@ NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=your_next_sign_up_url
 # Vonage Video API (for video calls)
 NEXT_PUBLIC_VONAGE_APPLICATION_ID=your_vonage_app_id
 VONAGE_PRIVATE_KEY=your_vonage_api_key
-
+```
 
 4. Set up the database:
 
@@ -77,7 +77,7 @@ npx prisma generate
 
 # Run database migrations
 npx prisma db push
-````
+```
 
 5. Run the development server:
 
