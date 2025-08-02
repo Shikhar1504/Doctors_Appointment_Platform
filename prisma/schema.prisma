@@ -21,7 +21,7 @@ model User {
   updatedAt         DateTime  @updatedAt
   
   // Patient-specific fields
-  credits           Int       @default(2) // Accumulated credit balance
+  credits           Int       @default(10) // Accumulated credit balance
   
   // Doctor-specific fields
   specialty         String?

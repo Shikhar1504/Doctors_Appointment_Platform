@@ -1,11 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight, Stethoscope } from "lucide-react";
+import Pricing from "@/components/pricing";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import Pricing from "@/components/pricing";
 import { creditBenefits, features, testimonials } from "@/lib/data";
+import { ArrowRight, Stethoscope } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (

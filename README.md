@@ -1,8 +1,16 @@
-# Doctor Appointment Management System
+ # Doctor Appointment Management System
 
-A modern telemedicine platform built with Next.js that connects patients with doctors through secure video consultations. The platform features a credit-based system for appointments, doctor verification, and comprehensive appointment management.
+<p align="center">
+  <img src="./public/banner.png" alt="Project Banner" />
+</p>
 
-## Features
+<p align="center">
+  A modern telemedicine platform built with Next.js that connects patients with doctors through secure video consultations. The platform features a credit-based system for appointments, doctor verification, and comprehensive appointment management.
+</p>
+
+---
+
+## ✨ Features
 
 - 🏥 **Doctor Management**: Profile creation, verification system, and availability scheduling
 - 📅 **Appointment System**: Book, manage, and track appointments with real-time status updates
@@ -14,80 +22,89 @@ A modern telemedicine platform built with Next.js that connects patients with do
 - 💰 **Payout System**: Automated payout processing for doctors
 - 📱 **Responsive Design**: Modern UI built with Tailwind CSS and Radix UI
 
-## Tech Stack
+---
 
-- **Frontend Framework:** Next.js 15.3.2 with App Router
-- **Authentication:** Clerk
-- **Database:** PostgreSQL with Prisma ORM
-- **Styling:** Tailwind CSS 4.1.7
-- **UI Components:** Radix UI + Custom components
-- **Video Calls:** Vonage Video API (OpenTok)
-- **Forms:** React Hook Form with Zod validation
+## 🛠️ Tech Stack
+
+- **Frontend Framework:** [Next.js](https://nextjs.org/) 15.3.2 with App Router
+- **Authentication:** [Clerk](https://clerk.com/)
+- **Database:** [PostgreSQL](https://www.postgresql.org/) with [Prisma ORM](https://www.prisma.io/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) 4.1.7
+- **UI Components:** [Radix UI](https://www.radix-ui.com/) + Custom components
+- **Video Calls:** [Vonage Video API (OpenTok)](https://www.vonage.com/communications-apis/video/)
+- **Forms:** [React Hook Form](https://react-hook-form.com/) with [Zod](https://zod.dev/) validation
 - **State Management:** React hooks
-- **Deployment:** Vercel (recommended)
+- **Deployment:** [Vercel](https://vercel.com/) (recommended)
 
-## Prerequisites
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
 
 Before you begin, ensure you have installed:
 
-- Node.js (v18 or higher)
-- npm or yarn package manager
-- PostgreSQL database
+- [Node.js](https://nodejs.org/en/) (v18 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) package manager
+- [PostgreSQL](https://www.postgresql.org/download/) database
 
-## Getting Started
+### Installation
 
-1. Clone the repository:
+1. **Clone the repository**:
 
-```bash
-git clone https://github.com/Shikhar1504/Doctors_Appointment_Platform.git
-cd Doctor
-```
+   ```bash
+   git clone https://github.com/Shikhar1504/Doctors_Appointment_Platform.git
+   cd Doctor
+   ```
 
-2. Install dependencies:
+2. **Install dependencies**:
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
-3. Set up environment variables:
-   Create a `.env.local` file in the root directory and add the following variables:
+3. **Set up environment variables**:
 
-```env
-# Database
-DATABASE_URL="postgresql://username:password@localhost:5432/doctor_appointment"
+   Create a `.env.local` file in the root directory and add the following variables. You can get the required keys from the respective platforms.
 
-# Clerk Authentication
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-CLERK_SECRET_KEY=your_clerk_secret_key
-NEXT_PUBLIC_SIGN_IN_URL=your_sign_in_url
-NEXT_PUBLIC_SIGN_UP_URL=your_sign_up_url
-NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=your_next_sign_in_url
-NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=your_next_sign_up_url
+   ```env
+   # Database
+   DATABASE_URL="postgresql://username:password@localhost:5432/doctor_appointment"
 
-# Vonage Video API (for video calls)
-NEXT_PUBLIC_VONAGE_APPLICATION_ID=your_vonage_app_id
-VONAGE_PRIVATE_KEY=your_vonage_api_key
-```
+   # Clerk Authentication
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+   CLERK_SECRET_KEY=your_clerk_secret_key
+   NEXT_PUBLIC_SIGN_IN_URL=your_sign_in_url
+   NEXT_PUBLIC_SIGN_UP_URL=your_sign_up_url
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=your_next_sign_in_url
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=your_next_sign_up_url
 
-4. Set up the database:
+   # Vonage Video API (for video calls)
+   NEXT_PUBLIC_VONAGE_APPLICATION_ID=your_vonage_app_id
+   VONAGE_PRIVATE_KEY=your_vonage_api_key
+   ```
 
-```bash
-# Generate Prisma client
-npx prisma generate
+4. **Set up the database**:
 
-# Run database migrations
-npx prisma db push
-```
+   ```bash
+   # Generate Prisma client
+   npx prisma generate
 
-5. Run the development server:
+   # Run database migrations
+   npx prisma db push
+   ```
 
-```bash
-npm run dev
-```
+5. **Run the development server**:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```bash
+   npm run dev
+   ```
 
-## Project Structure
+   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+---
+
+## 📂 Project Structure
 
 ```
 Doctor/
@@ -120,45 +137,51 @@ Doctor/
 └── middleware.js         # Authentication middleware
 ```
 
-## Key Features Explained
+---
+
+## 🔑 Key Features Explained
 
 ### User Roles
 
-- **Patient**: Can book appointments, manage credits, and join video calls
-- **Doctor**: Can set availability, manage appointments, and receive payouts
-- **Admin**: Can manage users, process payouts, and oversee the platform
+- **Patient**: Can book appointments, manage credits, and join video calls.
+- **Doctor**: Can set availability, manage appointments, and receive payouts.
+- **Admin**: Can manage users, process payouts, and oversee the platform.
 
 ### Credit System
 
-- Patients purchase consultation credits
-- Each appointment costs 1 credit
-- Credits are deducted when appointments are completed
-- Doctors earn credits that can be converted to payouts
+- Patients purchase consultation credits.
+- Each appointment costs 1 credit.
+- Credits are deducted when appointments are completed.
+- Doctors earn credits that can be converted to payouts.
 
 ### Video Consultations
 
-- Secure video calls powered by Vonage Video API
-- Real-time communication between patients and doctors
-- Session management and recording capabilities
+- Secure video calls powered by Vonage Video API.
+- Real-time communication between patients and doctors.
+- Session management and recording capabilities.
 
 ### Appointment Management
 
-- Real-time availability checking
-- Appointment scheduling with conflict prevention
-- Status tracking (Scheduled, Completed, Cancelled)
-- Notes and patient descriptions
+- Real-time availability checking.
+- Appointment scheduling with conflict prevention.
+- Status tracking (Scheduled, Completed, Cancelled).
+- Notes and patient descriptions.
 
-## Database Schema
+---
+
+## 🗃️ Database Schema
 
 The application uses PostgreSQL with the following main models:
 
-- **User**: Patients, doctors, and admins with role-based fields
-- **Appointment**: Booking details with video session information
-- **Availability**: Doctor's available time slots
-- **CreditTransaction**: Credit purchase and usage tracking
-- **Payout**: Doctor earnings and payout processing
+- **User**: Patients, doctors, and admins with role-based fields.
+- **Appointment**: Booking details with video session information.
+- **Availability**: Doctor's available time slots.
+- **CreditTransaction**: Credit purchase and usage tracking.
+- **Payout**: Doctor earnings and payout processing.
 
-## Available Scripts
+---
+
+## 📜 Available Scripts
 
 - `npm run dev` - Start development server with Turbopack
 - `npm run build` - Build for production
@@ -167,7 +190,9 @@ The application uses PostgreSQL with the following main models:
 - `npx prisma generate` - Generate Prisma client
 - `npx prisma db push` - Push schema changes to database
 
-## Contributing
+---
+
+## 🤝 Contributing
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
@@ -175,11 +200,15 @@ The application uses PostgreSQL with the following main models:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License
+---
+
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Support
+---
+
+## 📞 Support
 
 For support, please open an issue in the repository or contact the maintainers.
 

@@ -7,9 +7,9 @@ import { format } from "date-fns";
 
 // Define credit allocations per plan
 const PLAN_CREDITS = {
-  free_user: 0, // Basic plan: 2 credits
-  standard: 10, // Standard plan: 10 credits per month
-  premium: 24, // Premium plan: 24 credits per month
+  free_user: 10, // Basic plan: 10 credits
+  standard: 20, // Standard plan: 10 credits per month
+  premium: 50, // Premium plan: 24 credits per month
 };
 
 // Each appointment costs 2 credits
@@ -194,3 +194,4 @@ export async function deductCreditsForAppointment(userId, doctorId) {
     return { success: false, error: error.message };
   }
 }
+
