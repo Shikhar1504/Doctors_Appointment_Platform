@@ -1,4 +1,4 @@
- # Doctor Appointment Management System
+# Doctor Appointment Management System
 
 <p align="center">
   <img src="./public/banner.png" alt="Project Banner" />
