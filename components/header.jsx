@@ -21,16 +21,18 @@ export default async function Header() {
   }
 
   return (
-    <header className="fixed top-0 w-full border-b bg-background/80 backdrop-blur-md z-10 supports-[backdrop-filter]:bg-background/60">
+    <header className="fixed top-0 w-full border-b border-primary/10 bg-background/90 backdrop-blur-xl z-50 supports-[backdrop-filter]:bg-background/80">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 cursor-pointer">
-          <Image
-            src="/logo-single.png"
-            alt="Medimeet Logo"
-            width={200}
-            height={60}
-            className="h-10 w-auto object-contain"
-          />
+        <Link href="/" className="flex items-center gap-3 cursor-pointer group">
+          <div className="flex items-center gap-2 group-hover:scale-105 transition-transform duration-200">
+            <div className="w-10 h-10 medical-gradient rounded-xl flex items-center justify-center">
+              <Stethoscope className="h-6 w-6 text-white" />
+            </div>
+            <div className="flex flex-col">
+              <span className="text-lg font-bold gradient-title leading-none">CareMeet</span>
+              <span className="text-xs text-muted-foreground leading-none">Healthcare Platform</span>
+            </div>
+          </div>
         </Link>
 
         {/* Action Buttons */}

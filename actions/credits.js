@@ -132,13 +132,17 @@ export async function deductCreditsForAppointment(userId, doctorId) {
       where: { id: doctorId },
     });
 
-    // Ensure user has sufficient credits
-    if (user.credits < APPOINTMENT_CREDIT_COST) {
-      throw new Error("Insufficient credits to book an appointment");
+    if (!user) {
+      throw new Error("User not found");
     }
 
     if (!doctor) {
       throw new Error("Doctor not found");
+    }
+
+    // Ensure user has sufficient credits
+    if (user.credits < APPOINTMENT_CREDIT_COST) {
+      throw new Error("Insufficient credits to book an appointment");
     }
 
     // Deduct credits from patient and add to doctor

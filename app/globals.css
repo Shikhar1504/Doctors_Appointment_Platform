@@ -44,38 +44,45 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --radius: 0.75rem;
+  --background: oklch(0.99 0.005 180);
+  --foreground: oklch(0.09 0.02 200);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0.09 0.02 200);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.45 0.15 250);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.45 0.15 250);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --popover-foreground: oklch(0.09 0.02 200);
+  --primary: oklch(0.55 0.18 190);
+  --primary-foreground: oklch(0.98 0.01 180);
+  --secondary: oklch(0.96 0.015 180);
+  --secondary-foreground: oklch(0.15 0.02 200);
+  --muted: oklch(0.96 0.015 180);
+  --muted-foreground: oklch(0.45 0.02 200);
+  --accent: oklch(0.65 0.2 165);
+  --accent-foreground: oklch(0.98 0.01 180);
+  --destructive: oklch(0.65 0.25 25);
+  --border: oklch(0.92 0.015 180);
+  --input: oklch(0.94 0.015 180);
+  --ring: oklch(0.55 0.18 190);
+  --chart-1: oklch(0.55 0.18 190);
+  --chart-2: oklch(0.65 0.2 165);
+  --chart-3: oklch(0.45 0.15 210);
+  --chart-4: oklch(0.7 0.22 140);
+  --chart-5: oklch(0.6 0.2 200);
+  --sidebar: oklch(0.98 0.01 180);
+  --sidebar-foreground: oklch(0.09 0.02 200);
+  --sidebar-primary: oklch(0.55 0.18 190);
+  --sidebar-primary-foreground: oklch(0.98 0.01 180);
+  --sidebar-accent: oklch(0.96 0.015 180);
+  --sidebar-accent-foreground: oklch(0.15 0.02 200);
+  --sidebar-border: oklch(0.92 0.015 180);
+  --sidebar-ring: oklch(0.55 0.18 190);
+  
+  /* Custom healthcare colors */
+  --medical-teal: oklch(0.55 0.18 190);
+  --medical-blue: oklch(0.45 0.15 210);
+  --medical-mint: oklch(0.65 0.2 165);
+  --warm-coral: oklch(0.68 0.15 35);
+  --soft-lavender: oklch(0.75 0.1 280);
 }
 
 .dark {
@@ -121,10 +128,108 @@
   }
 }
 
-@utility gradient {
-  @apply bg-gradient-to-b from-purple-500 to-violet-400;
+/* Custom Healthcare Gradients */
+@utility medical-gradient {
+  background: linear-gradient(135deg, 
+    oklch(0.55 0.18 190) 0%, 
+    oklch(0.65 0.2 165) 50%, 
+    oklch(0.45 0.15 210) 100%);
+}
+
+@utility warm-gradient {
+  background: linear-gradient(135deg, 
+    oklch(0.65 0.2 165) 0%, 
+    oklch(0.68 0.15 35) 100%);
 }
 
 @utility gradient-title {
-  @apply gradient font-bold text-transparent bg-clip-text pb-1 pr-2;
+  background: linear-gradient(135deg, 
+    oklch(0.35 0.25 190) 0%, 
+    oklch(0.45 0.3 165) 50%, 
+    oklch(0.25 0.2 210) 100%);
+  @apply font-bold text-transparent bg-clip-text;
+}
+
+@utility gradient-title-light {
+  background: linear-gradient(135deg, 
+    oklch(0.65 0.3 190) 0%, 
+    oklch(0.75 0.35 165) 50%, 
+    oklch(0.55 0.25 210) 100%);
+  @apply font-bold text-transparent bg-clip-text;
+}
+
+/* Custom Card Styles */
+@utility card-hover {
+  @apply transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1;
+}
+
+@utility card-glass {
+  @apply backdrop-blur-sm bg-white/80 border border-white/20;
+}
+
+/* Custom Button Styles */
+@utility btn-medical {
+  @apply medical-gradient text-white font-semibold px-6 py-3 rounded-xl 
+         transition-all duration-200 hover:scale-105 hover:shadow-lg 
+         active:scale-95 border-0;
+}
+
+@utility btn-outline-medical {
+  @apply bg-transparent border-2 border-primary text-primary font-semibold px-6 py-3 rounded-xl 
+         transition-all duration-200 hover:medical-gradient hover:text-white hover:scale-105 
+         hover:shadow-lg active:scale-95;
+}
+
+/* Animation Utilities */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px oklch(0.55 0.18 190 / 0.3); }
+  50% { box-shadow: 0 0 30px oklch(0.55 0.18 190 / 0.6); }
+}
+
+@keyframes slide-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@utility animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@utility animate-slide-in-up {
+  animation: slide-in-up 0.6s ease-out;
+}
+
+/* Healthcare-specific patterns */
+@utility medical-pattern {
+  background-image: radial-gradient(circle at 2px 2px, oklch(0.55 0.18 190 / 0.1) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+/* Typography improvements */
+@utility heading-medical {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight;
+}
+
+@utility subheading-medical {
+  @apply text-xl md:text-2xl font-semibold text-muted-foreground;
+}
+
+/* Focus and accessibility improvements */
+@utility focus-medical {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
 }
