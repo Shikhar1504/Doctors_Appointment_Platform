@@ -1,124 +1,107 @@
-# 🩺 CareMeet - AI-Powered Telemedicine Platform
+# CareMeet - AI-Powered Telemedicine Platform
 
-<p align="center">
-  <img src="./public/banner.png" alt="CareMeet - AI-Powered Telemedicine Platform" />
-</p>
+## Project Title and Short Description
 
-<p align="center">
-  <b>Next-Generation Healthcare Platform</b> 🚀
-</p>
+**CareMeet** is a comprehensive AI-powered telemedicine platform that connects patients with verified doctors through secure video consultations. Built with modern web technologies, CareMeet features intelligent symptom analysis, automated doctor matching, and a flexible credit-based payment system. The platform supports multiple user roles (patients, doctors, and administrators) and provides a seamless healthcare experience from initial consultation to follow-up care.
 
-<p align="center">
-  CareMeet is an advanced AI-powered telemedicine platform that revolutionizes healthcare delivery through intelligent symptom analysis, secure video consultations, and comprehensive patient-doctor management. Built with cutting-edge technology, CareMeet provides emergency care routing, specialist matching, and enterprise-grade security for modern healthcare needs.
-</p>
+## Features
 
-<p align="center">
-  <a href="#-how-caremeet-works">🩺 Explore Features</a> •
-  <a href="#-getting-started">🚀 Quick Start</a> •
-  <a href="#%EF%B8%8F-tech-stack">🛠️ Tech Stack</a> •
-  <a href="#-project-structure">📂 Documentation</a>
-</p>
+CareMeet offers a complete telemedicine solution with the following key functionalities:
 
----
+- **🤖 AI Health Assistant**: Advanced symptom analysis powered by Google Gemini AI with automatic urgency classification and specialist recommendations
+- **🎥 Secure Video Consultations**: HIPAA-compliant video calls using Vonage Video API with end-to-end encryption
+- **👨‍⚕️ Doctor Verification System**: Multi-step credential verification for healthcare providers across 15+ medical specialties
+- **📅 Smart Appointment Booking**: Real-time availability checking with conflict prevention and instant confirmation
+- **💳 Flexible Credit System**: Subscription-based credit packages with automatic monthly allocation (2 credits per consultation)
+- **💰 Doctor Earnings & Payouts**: Real-time earnings tracking with secure PayPal payouts for healthcare providers
+- **📊 Admin Dashboard**: Comprehensive platform management including user oversight, doctor verification, and payout processing
+- **🚨 Emergency Detection**: AI-powered identification of critical symptoms with immediate emergency routing
+- **🔍 Intelligent Matching**: Symptom-based doctor-patient matching with specialty filtering
+- **📱 Responsive Design**: Mobile-first interface with dark/light theme support and accessibility compliance
+- **🔐 Enterprise Security**: Multi-factor authentication, audit logging, and HIPAA-compliant data handling
 
-## ✨ Features
-
-- 🤖 **AI Health Assistant**: Advanced symptom analysis powered by Google Gemini AI with urgency classification and specialist recommendations
-- 🏥 **Doctor Management**: Profile creation, verification system, and availability scheduling
-- 📅 **Smart Appointment System**: Book, manage, and track appointments with real-time availability and conflict prevention
-- 🎥 **Secure Video Consultations**: Integrated Vonage Video API for HIPAA-compliant telemedicine sessions
-- 💳 **Flexible Credit System**: Subscription-based credit packages with automatic monthly allocation
-- 👥 **Multi-Role Platform**: Patient, Doctor, and Admin roles with role-specific dashboards
-- 🔒 **Enterprise Authentication**: Secure authentication and authorization using Clerk
-- 📊 **Comprehensive Admin Dashboard**: Complete user management, doctor verification, and payout processing
-- 💰 **Automated Payout System**: Real-time earnings tracking and secure payout processing for doctors
-- 🚨 **Emergency Classification**: AI-powered urgency detection with emergency care routing
-- 📱 **Responsive Design**: Modern, accessible UI built with Tailwind CSS and Radix UI
-- 🔍 **Specialty Matching**: Intelligent doctor-patient matching based on symptoms and specialties
-- 📈 **Analytics Dashboard**: Real-time insights for doctors including earnings, appointments, and performance metrics
-
----
-
-## 🛠️ Tech Stack
-
-### Core Technologies
-- **Frontend Framework:** [Next.js](https://nextjs.org/) 15.3.2 with App Router
-- **Runtime:** Node.js 18+
-- **Language:** JavaScript/JSX
-- **Package Manager:** npm/yarn
-
-### AI & Machine Learning
-- **AI Assistant:** [Google Gemini AI](https://ai.google.com/) for symptom analysis and medical recommendations
-- **AI Models:** Gemini-1.5-Flash, Gemini-1.5-Pro, Gemini-2.5-Flash for health consultations
-
-### Authentication & Security
-- **Authentication:** [Clerk](https://clerk.com/) with role-based access control
-- **Authorization:** Server-side middleware and route protection
-- **Security:** HIPAA-compliant data handling
-
-### Database & ORM
-- **Database:** [PostgreSQL](https://www.postgresql.org/)
-- **ORM:** [Prisma](https://www.prisma.io/) with advanced schema management
-- **Database Operations:** Server actions with transaction support
+## Technologies Used
 
 ### Frontend & UI
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/) 4.1.7 with custom medical themes
-- **UI Components:** [Radix UI](https://www.radix-ui.com/) primitives with custom implementations
-- **Icons:** [Lucide React](https://lucide.dev/) for consistent iconography
-- **Notifications:** [Sonner](https://sonner.emilkowal.ski/) for toast notifications
-- **Theme:** Custom dark/light theme support with medical-focused design
 
-### Video & Communication
-- **Video Calls:** [Vonage Video API (OpenTok)](https://www.vonage.com/communications-apis/video/)
-- **Real-time:** WebRTC for secure peer-to-peer communication
-- **Session Management:** Token-based video session authentication
+- **Next.js 15.3.2** - React framework with App Router for server-side rendering and routing
+- **React 19** - Modern React with hooks and concurrent features
+- **Tailwind CSS 4.1.7** - Utility-first CSS framework with custom medical themes
+- **Radix UI** - Accessible, unstyled UI components for consistent design
+- **Lucide React** - Beautiful, consistent icon library
 
-### Forms & Validation
-- **Forms:** [React Hook Form](https://react-hook-form.com/) for performant form handling
-- **Validation:** [Zod](https://zod.dev/) for runtime type validation
-- **Form UI:** Custom form components with Radix UI integration
+### Backend & Database
 
-### State Management & Data Fetching
-- **State Management:** React hooks with custom context providers
-- **Server State:** Custom hooks for data fetching and caching
-- **Optimistic Updates:** Real-time UI updates with revalidation
+- **Node.js 18+** - JavaScript runtime for server-side operations
+- **PostgreSQL** - Robust relational database for data persistence
+- **Prisma** - Type-safe ORM with database schema management and migrations
 
-### Development & Deployment
-- **Build Tool:** Turbopack for fast development builds
-- **Linting:** ESLint with Next.js configuration
-- **Deployment:** [Vercel](https://vercel.com/) with automatic CI/CD
-- **Monitoring:** Built-in error tracking and performance monitoring
+### Authentication & Security
 
----
+- **Clerk** - Complete authentication and user management solution
+- **Middleware** - Route protection and role-based access control
 
-## 🚀 Getting Started
+### AI & APIs
+
+- **Google Gemini AI** - Advanced AI models for symptom analysis and medical recommendations
+- **Vonage Video API** - Enterprise-grade video communication platform
+- **React Hook Form + Zod** - Form handling with runtime type validation
+
+### Development Tools
+
+- **ESLint** - Code linting and quality assurance
+- **Turbopack** - Fast development builds and hot reloading
+- **Sonner** - Toast notifications for user feedback
+
+## Screenshots or Demo
+
+### Landing Page
+
+_Hero section showcasing AI health assistant and key features_
+
+### AI Health Chat Interface
+
+_Interactive chat with symptom analysis and specialist recommendations_
+
+### Video Consultation
+
+_Secure video call interface with controls and participant views_
+
+### Doctor Dashboard
+
+_Earnings tracking, appointment management, and availability settings_
+
+### Admin Panel
+
+_User management, doctor verification, and payout processing_
+
+_Note: Screenshots and live demo will be added once the application is deployed. For now, you can run the development server locally to explore all features._
+
+## Installation & Setup Instructions
 
 ### Prerequisites
 
-Before you begin, ensure you have installed:
+- Node.js 18 or higher
+- PostgreSQL database
+- npm or yarn package manager
 
-- [Node.js](https://nodejs.org/en/) (v18 or higher)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) package manager
-- [PostgreSQL](https://www.postgresql.org/download/) database
+### Local Development Setup
 
-### Installation
-
-1. **Clone the repository**:
+1. **Clone the repository**
 
    ```bash
    git clone https://github.com/Shikhar1504/Doctors_Appointment_Platform.git
    cd Doctor
    ```
 
-2. **Install dependencies**:
+2. **Install dependencies**
 
    ```bash
    npm install
    ```
 
-3. **Set up environment variables**:
-
-   Create a `.env.local` file in the root directory and add the following variables. You can get the required keys from the respective platforms.
+3. **Environment Configuration**
+   Create a `.env.local` file in the root directory with the following variables:
 
    ```env
    # Database
@@ -127,304 +110,228 @@ Before you begin, ensure you have installed:
    # Clerk Authentication
    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
    CLERK_SECRET_KEY=your_clerk_secret_key
-   NEXT_PUBLIC_SIGN_IN_URL=your_sign_in_url
-   NEXT_PUBLIC_SIGN_UP_URL=your_sign_up_url
-   NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=your_next_sign_in_url
-   NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=your_next_sign_up_url
+   NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+   NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/onboarding
 
-   # Google Gemini AI (for AI Health Assistant)
+   # Google Gemini AI
    GEMINI_API_KEY=your_gemini_api_key
 
-   # Vonage Video API (for video calls)
+   # Vonage Video API
    NEXT_PUBLIC_VONAGE_APPLICATION_ID=your_vonage_app_id
-   VONAGE_PRIVATE_KEY=your_vonage_api_key
+   VONAGE_PRIVATE_KEY=your_vonage_private_key
    ```
 
-4. **Set up the database**:
+4. **Database Setup**
 
    ```bash
    # Generate Prisma client
    npx prisma generate
 
-   # Run database migrations
+   # Push schema to database
    npx prisma db push
    ```
 
-5. **Run the development server**:
+5. **Start Development Server**
 
    ```bash
    npm run dev
    ```
 
-   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   Open [http://localhost:3000](http://localhost:3000) to view the application.
 
----
+### Production Build
 
-## 📂 Project Structure
-
-```
-Doctor/
-├── app/                    # Next.js App Router
-│   ├── api/               # API routes
-│   │   └── ai-health/     # AI Health Assistant API
-│   ├── (auth)/            # Authentication pages
-│   │   ├── sign-in/
-│   │   └── sign-up/
-│   ├── (main)/            # Main application pages
-│   │   ├── admin/         # Admin dashboard with verification
-│   │   ├── appointments/  # Appointment management
-│   │   ├── doctor/        # Doctor dashboard & earnings
-│   │   ├── doctors/       # Doctor listing & filtering
-│   │   ├── onboarding/    # User role selection & setup
-│   │   ├── pricing/       # Credit packages & subscription
-│   │   └── video-call/    # Secure video consultation
-│   ├── globals.css        # Global styles & medical themes
-│   ├── layout.js          # Root layout with auth
-│   └── page.js            # Landing page with AI assistant
-├── components/            # Reusable UI components
-│   ├── ui/               # Base components (Radix UI)
-│   │   ├── alert.jsx
-│   │   ├── badge.jsx
-│   │   ├── button.jsx
-│   │   ├── card.jsx
-│   │   ├── dialog.jsx
-│   │   └── ...
-│   ├── ai-health-chat.jsx    # AI symptom analyzer
-│   ├── urgency-badge.jsx     # Medical urgency indicators
-│   ├── doctor-suggestions.jsx # AI specialist recommendations
-│   ├── appointment-card.jsx  # Appointment display
-│   ├── header.jsx           # Navigation header
-│   ├── page-header.jsx      # Page title components
-│   ├── pricing.jsx          # Credit pricing cards
-│   └── theme-provider.jsx   # Dark/light theme
-├── lib/                  # Utility functions and data
-│   ├── prisma.js         # Database connection
-│   ├── schema.js         # Zod validation schemas
-│   ├── data.js           # Static data & feature definitions
-│   └── checkUser.js      # Authentication utilities
-├── hooks/                # Custom React hooks
-│   └── use-fetch.js      # Data fetching hook
-├── actions/              # Server actions
-│   ├── admin.js          # Admin operations
-│   ├── appointments.js   # Booking & video sessions
-│   ├── credits.js        # Credit management
-│   ├── doctor.js         # Doctor profile management
-│   ├── patient.js        # Patient operations
-│   └── payout.js         # Doctor earnings & payouts
-├── prisma/               # Database schema and migrations
-│   └── schema.prisma     # Complete database schema
-├── public/               # Static assets
-├── middleware.js         # Authentication & route protection
-├── components.json       # shadcn/ui configuration
-├── tailwind.config.js    # Tailwind customization
-├── jsconfig.json         # JavaScript configuration
-└── eslint.config.mjs     # ESLint configuration
+```bash
+npm run build
+npm run start
 ```
 
----
+## API Endpoints
 
-## 🩺 How CareMeet Works
+### AI Health Assistant
 
-### 🤖 AI Health Assistant
-Get instant health guidance with our advanced AI-powered symptom analyzer:
-- **Smart Symptom Analysis**: Powered by Google Gemini AI for accurate health assessments
-- **Urgency Classification**: Automatic categorization (Emergency, High, Medium, Low priority)
-- **Specialist Recommendations**: AI suggests the most relevant medical specialists
-- **Emergency Detection**: Immediate routing to emergency services for critical symptoms
-- **Real-time Chat Interface**: Interactive conversation with medical-grade AI assistant
-- **Evidence-based Guidance**: Recommendations based on medical best practices
+- **POST** `/api/ai-health`
+  - Analyzes user symptoms using Google Gemini AI
+  - Returns urgency classification, specialist recommendations, and care guidance
+  - Request body: `{ "message": "user symptom description" }`
+  - Response includes urgency level, suggested specialties, and next steps
 
-### 👤 User Onboarding & Profile Management
-Seamless registration and profile setup for all user types:
-- **Role-based Registration**: Separate flows for Patients, Doctors, and Admins
-- **Secure Authentication**: Enterprise-grade security with Clerk integration
-- **Profile Customization**: Detailed profiles with medical history and preferences
-- **Verification System**: Multi-step doctor credential verification process
-- **Document Upload**: Secure handling of medical credentials and certifications
+### Authentication Endpoints (via Clerk)
 
-### 🏥 Doctor Management System
-Comprehensive tools for healthcare providers:
-- **Professional Profiles**: Detailed doctor profiles with specialties and experience
-- **Credential Verification**: Admin-controlled verification of medical licenses
-- **Availability Management**: Flexible scheduling with custom time slots
-- **Specialty Categorization**: 15+ medical specialties for precise matching
-- **Performance Analytics**: Earnings tracking and appointment insights
-- **Status Management**: Active/suspended account controls
+- `/sign-in` - User authentication
+- `/sign-up` - User registration
+- `/onboarding` - Role selection and profile setup
 
-### 📅 Smart Appointment System
-Intelligent booking with real-time conflict prevention:
-- **Real-time Availability**: Live calendar integration with instant updates
-- **Conflict Prevention**: Automatic detection and prevention of double-bookings
-- **Time Slot Management**: 30-minute consultation windows with buffer time
-- **Multi-day Booking**: Book appointments up to 4 days in advance
-- **Appointment History**: Complete record of past and upcoming consultations
-- **Status Tracking**: Real-time updates (Scheduled, Completed, Cancelled)
-- **Patient Descriptions**: Pre-consultation symptom and concern documentation
+### Protected Routes
 
-### 🎥 Secure Video Consultations
-HIPAA-compliant telemedicine powered by Vonage Video API:
-- **Enterprise Video Quality**: HD video with adaptive streaming
-- **Secure WebRTC**: End-to-end encrypted video communications
-- **Session Authentication**: Token-based access control for privacy
-- **Multi-platform Support**: Works on desktop, tablet, and mobile devices
-- **Real-time Controls**: Toggle video/audio, screen sharing capabilities
-- **Session Recording**: Optional recording for medical documentation
-- **Automatic Cleanup**: Sessions terminate securely after consultations
+- `/doctors` - Browse and filter doctors by specialty
+- `/appointments` - Manage patient appointments
+- `/doctor` - Doctor dashboard and earnings
+- `/admin` - Administrative functions
+- `/video-call` - Secure video consultations
 
-### 💳 Flexible Credit System
-Subscription-based payment model with automatic credit allocation:
-- **Multiple Plans**: Free (10 credits), Standard (20 credits), Premium (50 credits)
-- **Automatic Allocation**: Monthly credit distribution based on subscription tier
-- **Pay-per-Consultation**: 2 credits per appointment (approximately $20 value)
-- **Never-expiring Credits**: Credits remain available until used
-- **Transparent Pricing**: Clear cost structure with no hidden fees
-- **Subscription Management**: Easy plan changes and cancellation
+## Usage Instructions
 
-### 💰 Doctor Earnings & Payout System
-Automated earning distribution and payout processing:
-- **Real-time Earnings**: Live tracking of consultation revenue
-- **Revenue Sharing**: $8 per consultation to doctors, $2 platform fee
-- **Secure Payouts**: PayPal integration for safe money transfers
-- **Earnings Analytics**: Monthly summaries and performance insights
-- **Payout Requests**: On-demand withdrawal of earned credits
-- **Transaction History**: Complete financial record keeping
-- **Tax Documentation**: Detailed earning reports for tax purposes
+### For Patients
 
-### 📊 Comprehensive Admin Dashboard
-Powerful administrative tools for platform management:
-- **User Management**: Complete oversight of patients, doctors, and staff
-- **Doctor Verification**: Review and approve medical credentials
-- **Payout Processing**: Approve and manage doctor payment requests
-- **Platform Analytics**: System-wide metrics and performance indicators
-- **User Suspension**: Account management and security controls
-- **Financial Oversight**: Credit transaction monitoring and audit trails
-- **System Health**: Real-time platform status and error monitoring
+1. **Sign Up & Onboarding**
 
-### 🔍 Intelligent Doctor Matching
-AI-powered specialty matching for optimal care:
-- **Symptom-based Matching**: Connect patients with relevant specialists
-- **Specialty Filtering**: Browse doctors by medical expertise
-- **Availability Optimization**: Show doctors with open time slots first
-- **Experience Ranking**: Prioritize doctors based on credentials and reviews
-- **Geographic Considerations**: Future support for location-based matching
-- **Patient Preferences**: Match based on previous consultation history
+   - Create account and select "Patient" role
+   - Complete profile setup
 
-### 📱 Cross-platform Accessibility
-Modern, responsive design for all devices:
-- **Mobile-first Design**: Optimized for smartphones and tablets
-- **Progressive Web App**: App-like experience in web browsers
-- **Dark/Light Themes**: Comfortable viewing in any lighting condition
-- **Accessibility Compliance**: WCAG-compliant for users with disabilities
-- **Multi-browser Support**: Works across Chrome, Safari, Firefox, and Edge
-- **Offline Capabilities**: Limited functionality available without internet
+2. **AI Health Consultation**
 
-### 🚨 Emergency Care Integration
-Immediate routing for critical health situations:
-- **Emergency Detection**: AI identifies life-threatening symptoms
-- **911 Integration**: Direct emergency service contact for critical cases
-- **Urgent Care Routing**: Fast-track scheduling for high-priority symptoms
-- **Safety Protocols**: Clear escalation procedures for medical emergencies
-- **Disclaimer System**: Appropriate medical disclaimers and limitations
-- **Emergency Contacts**: Quick access to local emergency services
+   - Use the AI chat assistant on the homepage
+   - Describe symptoms for instant analysis
+   - Receive urgency classification and specialist recommendations
 
-### 🛡️ Verified Doctor Network
-Trusted healthcare providers with comprehensive verification:
-- **Credential Verification**: Multi-step verification of medical licenses and certifications
-- **Experience Validation**: Thorough review of professional background and expertise
-- **Continuous Monitoring**: Ongoing assessment of doctor performance and patient feedback
-- **Specialty Expertise**: Verified specialists across 15+ medical disciplines
-- **Quality Assurance**: Regular audits and compliance checks for all healthcare providers
-- **Professional Standards**: Adherence to medical ethics and professional conduct requirements
+3. **Book Appointments**
 
-### 📋 Comprehensive Medical Documentation
-Complete health record management and documentation:
-- **Appointment History**: Detailed records of all consultations and treatments
-- **Doctor's Notes**: Secure storage of medical observations and recommendations
-- **Treatment Plans**: Comprehensive care plans and follow-up instructions
-- **Prescription Management**: Digital prescription tracking and medication history
-- **Medical Reports**: Downloadable consultation summaries and health assessments
-- **Health Timeline**: Chronological view of patient's medical journey and progress
-- **Secure Sharing**: HIPAA-compliant sharing of medical records between providers
+   - Browse doctors by specialty or use AI recommendations
+   - Check real-time availability (up to 4 days ahead)
+   - Book 30-minute consultations (costs 2 credits)
 
-### 💡 Personalized Healthcare Recommendations
-AI-driven health insights and personalized care suggestions:
-- **Health Risk Assessment**: AI analysis of symptoms and medical history patterns
-- **Preventive Care Alerts**: Proactive notifications for health screenings and checkups
-- **Lifestyle Recommendations**: Personalized wellness and lifestyle improvement suggestions
-- **Medication Reminders**: Smart reminders for prescription adherence and refills
-- **Follow-up Scheduling**: Automated recommendations for follow-up appointments
-- **Health Trends**: Visual insights into health patterns and improvement tracking
+4. **Video Consultations**
 
-### 🔐 Enterprise Security & Privacy
-Advanced security measures for healthcare data protection:
-- **End-to-End Encryption**: All communications and data encrypted at rest and in transit
-- **HIPAA Compliance**: Full compliance with healthcare privacy regulations
-- **Multi-Factor Authentication**: Enhanced security with 2FA and biometric options
-- **Audit Logging**: Comprehensive tracking of all system access and data modifications
-- **Data Sovereignty**: Secure data centers with geographic data residency options
-- **Penetration Testing**: Regular security audits and vulnerability assessments
-- **Privacy Controls**: Granular user control over data sharing and privacy settings
+   - Join calls 30 minutes before scheduled time
+   - Use in-call controls for video/audio management
+   - Consultations are recorded for medical documentation
 
----
+5. **Credit Management**
+   - Purchase subscription packages for automatic credit allocation
+   - Monitor credit balance in header
+   - Credits never expire and can be used anytime
 
-## 🗃️ Database Schema
+### For Doctors
 
-The application uses PostgreSQL with Prisma ORM and includes the following comprehensive data models:
+1. **Profile Setup**
 
-### Core Models
-- **User**: Multi-role user management (PATIENT, DOCTOR, ADMIN) with authentication integration
-- **Appointment**: Complete appointment lifecycle with video session management
-- **Availability**: Doctor scheduling with flexible time slot management
-- **CreditTransaction**: Financial tracking for credit purchases and usage
-- **Payout**: Doctor earnings management with secure payout processing
+   - Complete doctor registration with specialty and experience
+   - Upload credential documents for verification
+   - Set availability schedule
 
-### Key Features
-- **Role-based Access**: Comprehensive user roles with appropriate field access
-- **Verification System**: Doctor credential verification with status tracking
-- **Financial Tracking**: Complete audit trail for credits and payments
-- **Video Integration**: Secure session management with Vonage Video API
-- **Appointment Management**: Status tracking from booking to completion
-- **Transaction Support**: Database-level consistency with Prisma transactions
+2. **Dashboard Management**
 
-### Security & Compliance
-- **Data Encryption**: Sensitive medical data protection
-- **Audit Trails**: Complete transaction and action logging
-- **HIPAA Considerations**: Medical data handling best practices
-- **Role Isolation**: Strict data access controls by user role
+   - View upcoming appointments and patient details
+   - Add consultation notes after appointments
+   - Track earnings and request payouts
 
----
+3. **Video Consultations**
+   - Join patient calls at scheduled times
+   - Access patient descriptions and medical history
+   - Provide professional medical advice
 
-## 📜 Available Scripts
+### For Administrators
 
-- `npm run dev` - Start development server with Turbopack
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-- `npx prisma generate` - Generate Prisma client
-- `npx prisma db push` - Push schema changes to database
+1. **Doctor Verification**
 
----
+   - Review pending doctor applications
+   - Verify credentials and approve/reject applications
+   - Manage doctor status (active/suspended)
 
-## 🤝 Contributing
+2. **Payout Processing**
+
+   - Review doctor payout requests
+   - Process payments via PayPal integration
+   - Monitor platform financials
+
+3. **User Management**
+   - Oversee all platform users
+   - Handle support requests and issues
+   - Monitor system health and analytics
+
+## Contribution Guidelines
+
+We welcome contributions to CareMeet! Here's how you can help:
+
+### Development Process
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes following our coding standards
+4. Test thoroughly and ensure all tests pass
+5. Submit a pull request with detailed description
 
----
+### Code Standards
 
-## 📄 License
+- Follow ESLint configuration for code quality
+- Use TypeScript for type safety where applicable
+- Maintain comprehensive documentation
+- Ensure responsive design and accessibility
+- Test across multiple browsers and devices
+
+### Areas for Contribution
+
+- UI/UX improvements and accessibility enhancements
+- Additional AI health analysis features
+- New medical specialties and doctor matching algorithms
+- Enhanced security and privacy features
+- Mobile app development
+- Integration with additional healthcare APIs
+
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## Key Learning & Skills Demonstrated
+
+This full-stack telemedicine platform showcases expertise in modern web development and healthcare technology integration:
+
+### Frontend Development
+
+- **Next.js 15** with App Router and Server Components
+- **React 19** with advanced hooks and state management
+- **Responsive Design** with Tailwind CSS and mobile-first approach
+- **Component Architecture** using Radix UI primitives
+- **Form Handling** with React Hook Form and Zod validation
+
+### Backend & Database
+
+- **Server Actions** for secure data operations
+- **Prisma ORM** with PostgreSQL for type-safe database operations
+- **API Development** with RESTful endpoints and error handling
+- **Authentication** with Clerk and middleware protection
+- **Database Design** with complex relationships and transactions
+
+### AI & Machine Learning Integration
+
+- **Google Gemini AI** integration for natural language processing
+- **Medical AI** for symptom analysis and specialist recommendations
+- **Prompt Engineering** for healthcare-specific AI responses
+- **Fallback Systems** for reliable AI service delivery
+
+### Real-time Communication
+
+- **Vonage Video API** for enterprise video communications
+- **WebRTC** implementation for peer-to-peer video calls
+- **Session Management** with token-based authentication
+- **Real-time Controls** for video/audio management
+
+### Security & Compliance
+
+- **HIPAA Compliance** considerations for healthcare data
+- **End-to-end Encryption** for sensitive communications
+- **Role-based Access Control** with granular permissions
+- **Audit Logging** and security best practices
+
+### DevOps & Deployment
+
+- **Environment Configuration** for multiple deployment environments
+- **Database Migrations** with Prisma schema management
+- **Performance Optimization** with Turbopack and code splitting
+- **Error Handling** and monitoring systems
+
+### Healthcare Domain Knowledge
+
+- **Medical Workflow** understanding and implementation
+- **Healthcare Regulations** awareness and compliance
+- **Patient-Doctor Communication** optimization
+- **Emergency Response** protocols and routing
+
+This project demonstrates the ability to build production-ready, scalable applications that solve real-world problems in the healthcare industry, combining technical expertise with domain-specific knowledge.
+
 ---
 
-## 📞 Support
-
-For support, please open an issue in the repository or contact the maintainers.
-
----
-
-Built with ❤️ using Next.js, Clerk, and Vonage
+Built with ❤️ by Shikhar using Next.js, Clerk, Google Gemini AI, and Vonage Video API
